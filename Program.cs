@@ -2,9 +2,24 @@
 
 class Program{
     static void Main(){
+
+        int codigo;
+
         Departamento dep_compras = new Departamento("D23", "Compras");
         Funcionario funcionario = new Funcionario("A43", "Matheus", dep_compras);
         Gerente gere = new Gerente(dep_compras.GetId(), "A-123", "Matheus", dep_compras);
+
+        List<Funcionarios> listaDeFuncionarios = new List<Funcionario>();
+
+        Console.WriteLine(@"
+        //=========MENU=========\\
+        Pressione o número indicado para navegar pelo menu:
+        1. Cadastrar departamento.
+        2. Cadastrar funcionário.
+        3. Editar funcionário.
+        4. Consultar funcionário.
+        ")
+        switch (codigo):
     }
 }
 
