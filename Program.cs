@@ -2,7 +2,7 @@
 
 class Program{
     static void Main(){
-        Departamento dep_compras = new Departamento("D23", "Compras");
+        Departamento dep_compras = new Departamento("D23", "Compras", "com", 2, "ger32");
         Funcionario funcionario = new Funcionario("A43", "Matheus", dep_compras);
         Gerente gere = new Gerente(dep_compras.GetId(), "A-123", "Matheus", dep_compras);
     }
