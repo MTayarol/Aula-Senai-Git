@@ -14,24 +14,24 @@ namespace Trabalho.Modulos{
             this.id_gerente = id_gerente;
         }
 
-        public string GetId(){
-            return id;
+        public string getId(){
+            return this.id_departamento;
         }
 
-        public string GetNome(){
-            return nome_departamento;
+        public string getNome(){
+            return this.nome_departamento;
         }
 
-        public string GetSigla(){
-            return sigla;
+        public string getSigla(){
+            return this.sigla;
         }
 
-        public int GetRamal(){
-            return ramal;
+        public int getRamal(){
+            return this.ramal;
         }
 
-        public string GetIdGerente(){
-            return id_gerente;
+        public string getIdGerente(){
+            return this.id_gerente;
         }
     }
 }

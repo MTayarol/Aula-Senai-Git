@@ -1,19 +1,28 @@
 namespace Trabalho.Modulos{
-    class CadastraFuncionario{
 
+class CadastraFuncionario{
+        private List<Funcionario> funcionarios = null;
+        private List<Departamento> departamentos = null;
         public void Cadastrar(List<Funcionario> funcionarios, List<Departamento> departamentos){
-
+            this.funcionarios = funcionarios;
+            this.departamentos = departamentos;
         }
         
-        public boolean VerificaIdExiste(List<Funcionario> funcionarios, string id){
-            foreach(funcionario in funcionarios){
-                if(funcionario.GetId == id)
-                    return true;
+        public bool VerificaIdExiste(List<Funcionario> funcionarios, String id){
+            try{
+                foreach(var funcionario in funcionarios){
+                    if(funcionario.getId() == id)
+                        return true;
+                }
+            
+            }catch(Exception e){
+                Console.WriteLine("Não tem um objeto para funcionário portanto o Id não pode ser verificado");
+                return false;
             }
             return false;
         }
 
-        public boolean VerificaNome(string nome_funcionario){
+        public bool VerificaNome(String nome_funcionario){
             if(nome_funcionario == null){
                 return false;
             }else {
@@ -21,25 +30,36 @@ namespace Trabalho.Modulos{
             }
         }
 
-        public boolean ValidaCpf(string cpf){
-            if(cpf.length > 11 || cpg.length < 11){
+        public bool ValidaCpf(String cpf){
+            if(cpf.Length > 11 || cpf.Length < 11){
                 return false;
             }else{
                 return true;
             }
         }
         
-        public boolean VerificaData(DateTime data){
+        public bool VerificaData(DateTime data){
+            try{
             DateTime limite = new DateTime(1950,6,20);
 
             return data > limite;
+            } catch (Exception e){
+                Console.WriteLine("Não tem um objeto para funcionário portanto o Id não pode ser verificado");
+                return false;
+            }
+            
         }
 
-        public boolean DepartamentoExiste(List<Departamento> departamentos, string id_departamento){
-            foreach(departamento in departamentos){
-                if(departamento.GetId() == id_departamento){
-                    return true;
+        public bool DepartamentoExiste(List<Departamento> departamentos, String id_departamento){
+            try{
+                foreach(var departamento in departamentos){
+                    if(departamento.getId() == id_departamento){
+                        return true;
+                    }
                 }
+            }catch (Exception e){
+                Console.WriteLine("Não tem um objeto para funcionário portanto o Id não pode ser verificado");
+                return false;
             }
             return false;
         }

@@ -11,11 +11,7 @@ class Program{
 
         int codigo;
 
-        Departamento dep_compras = new Departamento("D23", "Compras");
-        Funcionario funcionario = new Funcionario("A43", "Matheus", dep_compras);
-        Gerente gere = new Gerente(dep_compras.GetId(), "A-123", "Matheus", dep_compras);
-
-        List<Funcionarios> listaDeFuncionarios = new List<Funcionario>();
+        List<Funcionario> listaDeFuncionarios = new List<Funcionario>();
 
         Console.WriteLine(@"
         //=========MENU=========\\
@@ -25,7 +21,7 @@ class Program{
         3. Editar funcionário.
         4. Consultar funcionário.
         0. Sair
-        ")
+        ");
         codigo = int.Parse(Console.ReadLine());
 
         while (codigo != 0){

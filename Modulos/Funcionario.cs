@@ -12,7 +12,11 @@ namespace Trabalho.Modulos{
     public Funcionario(string id_funcionario, string nome_funcionario, Departamento dep){
         this.id_funcionario = id_funcionario;
         this.nome_funcionario = nome_funcionario;
-        this.id_departamento = dep.GetId();
+        this.id_departamento = dep.getId();
+    }
+
+    public String getId(){
+        return id_funcionario;
     }
     
 }
