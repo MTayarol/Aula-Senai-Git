@@ -6,6 +6,9 @@ class Program{
         List<Funcionario> funcionarios = new();
         List<Departamento> departamentos = new();
 
+        Cadastro cad = new();
+        Departamento dep_compras = cad.CadastrarDepartamento();
+
         int codigo;
 
         Departamento dep_compras = new Departamento("D23", "Compras");
