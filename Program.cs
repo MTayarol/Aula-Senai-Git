@@ -2,7 +2,8 @@
 
 class Program{
     static void Main(){
-        Departamento dep_compras = new Departamento("D23", "Compras", "com", 2, "ger32");
+        Cadastro cad = new();
+        Departamento dep_compras = cad.CadastrarDepartamento();
         Funcionario funcionario = new Funcionario("A43", "Matheus", dep_compras);
         Gerente gere = new Gerente(dep_compras.GetId(), "A-123", "Matheus", dep_compras);
     }

@@ -6,10 +6,10 @@ class Cadastro
     public Departamento CadastrarDepartamento()
     {
         Console.Write("ID: ");
-        string id = Console.ReadLine();
+        String id = Console.ReadLine();
 
         Console.Write("Nome: ");
-        string nome = Console.ReadLine();
+        String nome = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(nome))
         {
@@ -18,7 +18,7 @@ class Cadastro
         }
 
         Console.Write("Sigla: ");
-        string sigla = Console.ReadLine();
+        String sigla = Console.ReadLine();
 
         Console.Write("Ramal: ");
         if (!int.TryParse(Console.ReadLine(), out int ramal))
@@ -28,7 +28,7 @@ class Cadastro
         }
 
         Console.Write("ID do gerente: ");
-        string idGerente = Console.ReadLine();
+        String idGerente = Console.ReadLine();
 
         return new Departamento(id, nome, sigla, ramal, idGerente);
     }
