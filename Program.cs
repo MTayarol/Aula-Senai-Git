@@ -23,15 +23,6 @@ class Program{
     }
 }
 
-
-
-
-
-
-
-
-
-
 //Criar função de cadastrar departamento: Deve-se verificar a unicidade do código (Não podem haver ids repetidas), nome obrigatório,
 //Ramal apenas numérico e existência de id_gerente no arquivo de funcionários.
 
