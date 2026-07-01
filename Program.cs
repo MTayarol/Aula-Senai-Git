@@ -3,6 +3,9 @@
 class Program{
     static void Main(){
 
+        List<Funcionario> funcionarios = new();
+        List<Departamento> departamentos = new();
+
         int codigo;
 
         Departamento dep_compras = new Departamento("D23", "Compras");
@@ -18,8 +21,13 @@ class Program{
         2. Cadastrar funcionário.
         3. Editar funcionário.
         4. Consultar funcionário.
+        0. Sair
         ")
-        switch (codigo):
+        codigo = int.Parse(Console.ReadLine());
+
+        while (codigo != 0){
+
+        }
     }
 }
 

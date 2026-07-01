@@ -1,23 +1,37 @@
 namespace Trabalho.Modulos{
-
     class Departamento{
-        string id; //Chave primária.
-        string id_gerente; 
-        string nome_departamento;
-        string sigla;
-        int ramal; //Ramal tem que ser validado como apenas numérico
-        string chave;
+        private string id_departamento; // Chave primária
+        private string id_gerente;      // Chave estrangeira
+        private string nome_departamento;
+        private string sigla;
+        private int ramal;
 
-        public Departamento(string id, string nome_departamento){
-            this.id = id;
-            this.nome = nome;
+        public Departamento(string id_departamento, string nome_departamento, string sigla, int ramal, string id_gerente){
+            this.id_departamento = id_departamento;
+            this.nome_departamento = nome_departamento;
+            this.sigla = sigla;
+            this.ramal = ramal;
+            this.id_gerente = id_gerente;
         }
 
         public string GetId(){
-            return this.id;
+            return id;
         }
-        public string getNome(){
-            return this.nome_departamento;
+
+        public string GetNome(){
+            return nome_departamento;
+        }
+
+        public string GetSigla(){
+            return sigla;
+        }
+
+        public int GetRamal(){
+            return ramal;
+        }
+
+        public string GetIdGerente(){
+            return id_gerente;
         }
     }
 }
