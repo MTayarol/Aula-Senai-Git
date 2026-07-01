@@ -1,8 +1,9 @@
-using System;
+namespace Trabalho.Modulos{
 
 class Cadastro
 {
-    public static Departamento CadastrarDepartamento()
+    public Cadastro(){}
+    public Departamento CadastrarDepartamento()
     {
         Console.Write("ID: ");
         string id = Console.ReadLine();
@@ -31,4 +32,5 @@ class Cadastro
 
         return new Departamento(id, nome, sigla, ramal, idGerente);
     }
+}
 }
